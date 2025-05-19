@@ -1,0 +1,30 @@
+name: Build Plugin
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+
+    - name: Build Linux
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        sudo apt-get install -y cmake build-essential
+        mkdir build
+        cd build
+        cmake ..
+        make -j$(nproc)
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: ${{ matrix.os }}-binaries
+        path: bin/
