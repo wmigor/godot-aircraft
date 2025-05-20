@@ -251,15 +251,15 @@ real_t VehicleWing3D::get_angle_of_attack(const Vector3 &p_wind) {
 	return angle;
 }
 
-// PackedStringArray VehicleWing3D::_get_configuration_warnings() const {
-// 	PackedStringArray warnings = Node3D::_get_configuration_warnings();
-//
-// 	if (Object::cast_to<RigidBody3D>(get_parent()) == nullptr) {
-// 		warnings.push_back("VehicleWing3D serves to provide a aerodynamic to a VehicleBody3D or RigidBody3D. Please use it as a child of a VehicleBody3D or RigidBody3D.");
-// 	}
-//
-// 	return warnings;
-// }
+PackedStringArray VehicleWing3D::_get_configuration_warnings() const {
+	PackedStringArray warnings = Node3D::_get_configuration_warnings();
+
+	if (Object::cast_to<RigidBody3D>(get_parent()) == nullptr) {
+		warnings.push_back("VehicleWing3D serves to provide a aerodynamic to a VehicleBody3D or RigidBody3D. Please use it as a child of a VehicleBody3D or RigidBody3D.");
+	}
+
+	return warnings;
+}
 
 void VehicleWing3D::_notification(int p_what) {
 	switch (p_what) {

@@ -115,7 +115,6 @@ private:
 
 	static real_t get_angle_of_attack(const Vector3 &p_wind);
 
-	// PackedStringArray _get_configuration_warnings() const override;
 	void _notification(int p_what);
 	void on_enter_tree();
 	void on_exit_tree();
@@ -125,6 +124,7 @@ protected:
 
 public:
 	void calculate(const Vector3 &p_linear_velocity, const Vector3 &p_angular_velocity, const Vector3 &p_center_of_mass);
+	PackedStringArray _get_configuration_warnings() const override;
 
 	Vector3 get_tip() const;
 	bool has_flap() const;
