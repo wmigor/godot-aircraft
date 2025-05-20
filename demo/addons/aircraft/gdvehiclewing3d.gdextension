@@ -1,9 +1,0 @@
-[configuration]
-
-entry_symbol = "library_init"
-compatibility_minimum = "4.4"
-reloadable = true
-
-[libraries]
-linux.debug.x86_64 = "res://addons/aircraft/bin/libAircraft.so"
-linux.release.x86_64 = "res://addons/aircraft/bin/libAircraft.so"

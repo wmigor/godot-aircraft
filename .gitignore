@@ -15,6 +15,19 @@ export_credentials.cfg
 data_*/
 mono_crash.*.json
 
+src/gen/
+
+# Objects
+.scons-cache/
+*.os
+*.obj
+*.o
+
+# SConstruct
+.sconf_temp
+.sconsign.dblite
+*.pyc
+
 build/
 .idea/
 demo/addons/aircraft/bin/
