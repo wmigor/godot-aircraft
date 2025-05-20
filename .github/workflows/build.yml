@@ -24,4 +24,4 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: ${{ matrix.os }}-binaries
-        path: bin/
+        path: demo/addons/aircraft/bin/
