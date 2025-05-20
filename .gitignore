@@ -17,4 +17,5 @@ mono_crash.*.json
 
 build/
 .idea/
+demo/addons/aircraft/bin/
 *.kdev4
