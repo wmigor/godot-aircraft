@@ -20,7 +20,7 @@ if scons_cache_path != None:
 	print("Scons cache enabled... (path: '" + scons_cache_path + "')")
 
 if env["target"] in ["editor", "template_debug"]:
-	doc_data = env.GodotCPPDocData("src/gen/doc_data.gen.cpp", source=Glob("doc/doc_classes/*.xml"))
+	doc_data = env.GodotCPPDocData("src/gen/doc_data.gen.cpp", source=Glob("doc/classes/*.xml"))
 	sources.append(doc_data)
 
 debug_or_release = "release" if env["target"] == "template_release" else "debug"
